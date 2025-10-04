@@ -297,12 +297,21 @@
                                 We proudly support the Texas Grand Chapter's endorsement of Patriot Paws, an organization that trains and provides service dogs to disabled American veterans.
                             </p>
                         </div>
+                        
+                        <!-- UPDATED LOCAL SCHOLARSHIP SECTION WITH DOWNLOAD BUTTON -->
                         <div class="p-4 rounded-lg bg-gray-100 shadow-sm">
-                            <h4 class="font-bold text-lg text-oes-primary">ESTARL Scholarships</h4>
-                            <p class="text-gray-600 text-sm mt-1">
-                                We raise funds for the Eastern Star Training Awards for Religious Leadership (ESTARL) scholarship program, assisting students pursuing religious vocations.
+                            <h4 class="font-bold text-lg text-oes-primary">Local High School Scholarships</h4>
+                            <p class="text-gray-600 text-sm mt-1 mb-4">
+                                Leander Chapter No. 73 proudly provides scholarships directly to deserving graduating students from local Leander area high schools to support their continued education.
                             </p>
+                            <a href="#" id="scholarship-download-btn" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-md text-oes-primary bg-oes-secondary hover:bg-yellow-300 transition duration-300">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                Download Application & Instructions
+                            </a>
+                            <p id="scholarship-message" class="text-xs mt-2 text-green-700 hidden">Simulated download link activated.</p>
                         </div>
+                        <!-- END UPDATED SECTION -->
+
                         <div class="p-4 rounded-lg bg-gray-100 shadow-sm">
                             <h4 class="font-bold text-lg text-oes-primary">Youth Support (Rainbow & DeMolay)</h4>
                             <p class="text-gray-600 text-sm mt-1">
@@ -352,8 +361,8 @@
                                 </span>
                                 <span>
                                     <strong class="font-bold">Meeting Schedule:</strong><br>
-                                    2nd and 4th Monday of each month <br>
-                                    (Check Calendar for degree work or dark dates)
+                                    3rd Tuesday of each month @ 7:30 PM <br>
+                                    (Dinner begins at 6:30 PM)
                                 </span>
                             </p>
                             <p class="flex items-start space-x-3">
@@ -454,6 +463,22 @@
 
             }, 2000); // 2 second delay for simulation
         });
+
+        // --- Scholarship Download Simulation ---
+        const downloadButton = document.getElementById('scholarship-download-btn');
+        const scholarshipMessage = document.getElementById('scholarship-message');
+
+        if (downloadButton) {
+            downloadButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                scholarshipMessage.textContent = 'Preparing download... (simulated)';
+                scholarshipMessage.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    scholarshipMessage.textContent = 'Download link placeholder activated.';
+                }, 1000);
+            });
+        }
     </script>
 </body>
 </html>
