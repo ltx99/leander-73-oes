@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leander No. 73 Order of the Eastern Star | Charity, Truth, Loving Kindness</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom colors based on OES symbolism for Tailwind configuration */
+        :root {
+            --color-oes-blue: #0077b6;    /* Adah / Fidelity */
+            --color-oes-yellow: #ffc300;  /* Ruth / Constancy */
+            --color-oes-white: #e9e9e9;   /* Esther / Loyalty */
+            --color-oes-green: #008000;   /* Martha / Faith */
+            --color-oes-red: #d62828;     /* Electa / Love */
+            --color-primary: #5e17eb;     /* Deep Purple/Masonic theme */
+            --color-secondary: #ffad00;   /* Gold/Yellow accent */
+        }
+
+        /* Custom configuration for Tailwind colors */
+        .oes-blue { background-color: var(--color-oes-blue); }
+        .oes-yellow { background-color: var(--color-oes-yellow); }
+        .oes-white { background-color: var(--color-oes-white); }
+        .oes-green { background-color: var(--color-oes-green); }
+        .oes-red { background-color: var(--color-oes-red); }
+
+        /* Custom gradient for the hero section */
+        .hero-bg {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #3a0e98 100%);
+        }
+
+        /* Style for the five-pointed star icon */
+        .oes-star-icon {
+            transform: rotate(180deg); /* Points down, symbolizing humility */
+        }
+
+        /* Custom CSS for the star points layout on desktop */
+        @media (min-width: 1024px) {
+            .star-points-grid > div:nth-child(5) {
+                grid-column: 2 / span 1; /* Center Electa in the 5-item grid */
+            }
+        }
+        
+        /* Font for a slightly more traditional yet clean look */
+        .font-serif-display {
+            font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+        }
+
+        /* Styling for the loading spinner */
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-left-color: #ffffff;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'oes-primary': 'var(--color-primary)',
+                        'oes-secondary': 'var(--color-secondary)',
+                        'oes-blue': 'var(--color-oes-blue)',
+                        'oes-yellow': 'var(--color-oes-yellow)',
+                        'oes-white-point': 'var(--color-oes-white)',
+                        'oes-green': 'var(--color-oes-green)',
+                        'oes-red': 'var(--color-oes-red)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['ui-serif', 'Georgia'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 shadow-md bg-white">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="#home" class="flex items-center space-x-2">
+                <!-- Inline SVG Star Logo (Pointing Down) -->
+                <svg class="w-8 h-8 oes-star-icon" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="var(--color-oes-blue)" d="M256 0l64 160h192l-155 112 60 160-161-120-161 120 60-160-155-112h192z"/>
+                </svg>
+                <span class="text-xl font-bold text-oes-primary">Leander No. 73 OES</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-gray-600 font-medium">
+                <a href="#about" class="hover:text-oes-primary transition duration-300">About Us</a>
+                <a href="#charities" class="hover:text-oes-primary transition duration-300">Charities</a>
+                <a href="#star-points" class="hover:text-oes-primary transition duration-300">Our Virtues</a>
+                <a href="#contact" class="px-3 py-1 bg-oes-secondary text-white rounded-lg shadow-md hover:bg-oes-primary transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 transition duration-150" aria-label="Open menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-lg border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">About Us</a>
+                <a href="#charities" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Charities</a>
+                <a href="#star-points" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Our Virtues</a>
+                <a href="#contact" class="block w-4/5 mx-auto px-3 py-2 rounded-lg text-base font-medium text-white bg-oes-primary hover:bg-oes-secondary transition duration-300">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="home" class="hero-bg text-white py-24 sm:py-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="space-y-6">
+                    <!-- Large Downward-Pointing Star -->
+                    <svg class="w-16 h-16 mx-auto oes-star-icon" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="url(#starGradient)" d="M256 0l64 160h192l-155 112 60 160-161-120-161 120 60-160-155-112h192z"/>
+                        <defs>
+                            <linearGradient id="starGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:gold;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:var(--color-oes-yellow);stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                    <h1 class="text-4xl sm:text-6xl font-extrabold font-serif-display leading-tight">
+                        Leander Chapter No. 73
+                    </h1>
+                    <h2 class="text-2xl sm:text-3xl font-light italic">
+                        The Order of the Eastern Star, Leander, Texas
+                    </h2>
+                    <p class="mt-4 max-w-3xl mx-auto text-xl font-medium">
+                        Dedicated to **Charity, Truth, and Loving Kindness**. We are committed to uplifting our community through service, education, and fraternal love.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#contact" class="inline-block px-8 py-3 bg-oes-secondary text-oes-primary font-bold text-lg rounded-full shadow-lg hover:bg-white transition duration-300 transform hover:scale-105">
+                            Inquire About Membership
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Us / Mission Section -->
+        <section id="about" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:text-center">
+                    <h3 class="text-base text-oes-primary font-semibold tracking-wide uppercase">Who We Are</h3>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        A Fraternal Family United in Service
+                    </p>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                        The Order of the Eastern Star is the largest fraternal organization in the world open to both men and women, built on the foundations of the Masonic family. Our purpose is to provide a spiritual and social environment where good people are inspired to be better.
+                    </p>
+                </div>
+
+                <div class="mt-10">
+                    <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-oes-primary text-white shadow-lg">
+                                    <!-- Icon for Faith -->
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354c-4.148-4.148-10.9-1.077-10.9 5.646 0 5.432 4.148 7.397 10.9 14.127 6.752-6.73 10.9-8.695 10.9-14.127 0-6.723-6.752-9.794-10.9-5.646z"></path></svg>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <dt class="text-lg leading-6 font-medium text-gray-900">
+                                    Shared Principles
+                                </dt>
+                                <dd class="mt-2 text-base text-gray-500">
+                                    We teach moral lessons based on Biblical figures, promoting essential virtues like Fidelity, Constancy, Loyalty, Faith, and Love through a system of degrees.
+                                </dd>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-oes-primary text-white shadow-lg">
+                                    <!-- Icon for Community -->
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-3m-1.5-1.5a4.5 4.5 0 01-9 0m9 0a4.5 4.5 0 00-9 0m9 0h-3v-3m-1.5-1.5a4.5 4.5 0 01-9 0m9 0a4.5 4.5 0 00-9 0m9 0h-3v-3m-1.5-1.5a4.5 4.5 0 01-9 0m9 0a4.5 4.5 0 00-9 0m9 0h-3v-3"></path></svg>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <dt class="text-lg leading-6 font-medium text-gray-900">
+                                    Local Fraternal Bond
+                                </dt>
+                                <dd class="mt-2 text-base text-gray-500">
+                                    Leander Chapter No. 73 provides a caring and supportive environment for members and their families in the Leander and Central Texas area.
+                                </dd>
+                            </div>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Star Points Section (Our Virtues) -->
+        <section id="star-points" class="py-16 sm:py-24 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h3 class="text-base text-oes-primary font-semibold tracking-wide uppercase">The Five-Pointed Star</h3>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        Lessons of the Five Heroines
+                    </p>
+                    <p class="mt-4 max-w-3xl text-xl text-gray-500 mx-auto">
+                        Each point of our Star symbolizes a virtue, a color, and a heroic woman from Biblical history who displayed great devotion, courage, and faith.
+                    </p>
+                </div>
+
+                <div class="mt-12 star-points-grid grid grid-cols-1 gap-8 lg:grid-cols-3">
+
+                    <!-- Point 1: Adah (Blue) -->
+                    <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-8 border-oes-blue">
+                        <div class="flex items-center mb-4 space-x-3">
+                            <span class="text-2xl font-bold text-oes-blue">Adah</span>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full text-white oes-blue">Fidelity</span>
+                        </div>
+                        <p class="text-gray-600">
+                            The first point represents **Jephthah's Daughter**, symbolizing loyalty and obedience. Her story teaches us the value of adhering to one's word and moral integrity, regardless of the personal cost.
+                        </p>
+                    </div>
+
+                    <!-- Point 2: Ruth (Yellow) -->
+                    <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-8 border-oes-yellow">
+                        <div class="flex items-center mb-4 space-x-3">
+                            <span class="text-2xl font-bold text-oes-yellow">Ruth</span>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full text-gray-900 oes-yellow">Constancy</span>
+                        </div>
+                        <p class="text-gray-600">
+                            The yellow point honors **Ruth**, the faithful widow, who embodies steadfast friendship and devotion. She teaches us selfless commitment and perseverance through difficult circumstances.
+                        </p>
+                    </div>
+
+                    <!-- Point 3: Esther (White) -->
+                    <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-8 border-oes-white-point">
+                        <div class="flex items-center mb-4 space-x-3">
+                            <span class="text-2xl font-bold text-gray-700">Esther</span>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full text-gray-900 oes-white">Loyalty</span>
+                        </div>
+                        <p class="text-gray-600">
+                            The white point is dedicated to **Queen Esther**, representing loyalty and courage. She demonstrated moral fortitude by risking her own life to save her people, standing for righteousness and truth.
+                        </p>
+                    </div>
+
+                    <!-- Point 4: Martha (Green) -->
+                    <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-8 border-oes-green">
+                        <div class="flex items-center mb-4 space-x-3">
+                            <span class="text-2xl font-bold text-oes-green">Martha</span>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full text-white oes-green">Faith</span>
+                        </div>
+                        <p class="text-gray-600">
+                            The green point represents **Martha**, the sister of Lazarus, symbolizing faith in immortality. Her lesson encourages a steadfast and unwavering belief in divine promises and eternal life.
+                        </p>
+                    </div>
+
+                    <!-- Point 5: Electa (Red) -->
+                    <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-8 border-oes-red col-span-1 lg:col-start-3">
+                        <div class="flex items-center mb-4 space-x-3">
+                            <span class="text-2xl font-bold text-oes-red">Electa</span>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full text-white oes-red">Love</span>
+                        </div>
+                        <p class="text-gray-600">
+                            The red point honors **Electa**, the "elect lady," signifying fortitude and endurance. She teaches us the highest form of Christian love and patience in the face of tribulation and persecution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Charities & Community Work Section -->
+        <section id="charities" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center lg:text-left">
+                    <h3 class="text-base text-oes-secondary font-semibold tracking-wide uppercase">Community Outreach</h3>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        Making a Difference in Leander & Texas
+                    </p>
+                </div>
+                <div class="mt-10 lg:grid lg:grid-cols-3 lg:gap-8">
+                    <p class="text-lg text-gray-500 lg:col-span-1">
+                        Leander Chapter No. 73 is actively involved in philanthropic work that supports local needs and statewide initiatives through the Grand Chapter of Texas. Our commitment is to uplift the lives of those in need, especially the youth and the elderly.
+                    </p>
+                    <div class="mt-8 lg:mt-0 lg:col-span-2 space-y-6">
+                        <div class="p-4 rounded-lg bg-gray-100 shadow-sm">
+                            <h4 class="font-bold text-lg text-oes-primary">Patriot Paws Service Dogs</h4>
+                            <p class="text-gray-600 text-sm mt-1">
+                                We proudly support the Texas Grand Chapter's endorsement of Patriot Paws, an organization that trains and provides service dogs to disabled American veterans.
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-gray-100 shadow-sm">
+                            <h4 class="font-bold text-lg text-oes-primary">ESTARL Scholarships</h4>
+                            <p class="text-gray-600 text-sm mt-1">
+                                We raise funds for the Eastern Star Training Awards for Religious Leadership (ESTARL) scholarship program, assisting students pursuing religious vocations.
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-gray-100 shadow-sm">
+                            <h4 class="font-bold text-lg text-oes-primary">Youth Support (Rainbow & DeMolay)</h4>
+                            <p class="text-gray-600 text-sm mt-1">
+                                We are dedicated to nurturing future leaders by supporting the International Order of the Rainbow for Girls and the Order of DeMolay.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contact Section & Membership Inquiry -->
+        <section id="contact" class="py-16 sm:py-24 bg-oes-primary text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-12">
+                    <!-- Contact Form -->
+                    <div class="order-2 lg:order-1">
+                        <h3 class="text-2xl font-bold mb-6 text-oes-secondary">Get In Touch</h3>
+                        <form id="contact-form" class="space-y-4 bg-white p-6 rounded-xl shadow-2xl">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                                <input type="text" id="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 text-gray-800 focus:border-oes-secondary focus:ring-oes-secondary">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                <input type="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 text-gray-800 focus:border-oes-secondary focus:ring-oes-secondary">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Your Inquiry (e.g., Membership, Events, Donations)</label>
+                                <textarea id="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 text-gray-800 focus:border-oes-secondary focus:ring-oes-secondary"></textarea>
+                            </div>
+                            <button type="submit" id="submit-button" class="w-full flex justify-center items-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-oes-primary bg-oes-secondary hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-oes-secondary transition duration-300 transform hover:scale-[1.02]">
+                                <span id="button-text">Send Message</span>
+                                <div id="spinner" class="spinner hidden"></div>
+                            </button>
+                            <p id="response-message" class="text-center text-sm mt-3 text-oes-green hidden"></p>
+                        </form>
+                    </div>
+
+                    <!-- Chapter Details (Placeholder) -->
+                    <div class="order-1 lg:order-2 mt-12 lg:mt-0">
+                        <h3 class="text-2xl font-bold mb-6 text-oes-secondary">Chapter Information</h3>
+                        <div class="space-y-6 text-lg">
+                            <p class="flex items-start space-x-3">
+                                <span class="flex-shrink-0 text-oes-secondary">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h.01M13 11h.01M17 11h.01M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                </span>
+                                <span>
+                                    <strong class="font-bold">Meeting Schedule:</strong><br>
+                                    2nd and 4th Monday of each month <br>
+                                    (Check Calendar for degree work or dark dates)
+                                </span>
+                            </p>
+                            <p class="flex items-start space-x-3">
+                                <span class="flex-shrink-0 text-oes-secondary">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                </span>
+                                <span>
+                                    <strong class="font-bold">Location:</strong><br>
+                                    Leander Masonic Lodge Hall <br>
+                                    (Full address provided upon official inquiry)
+                                </span>
+                            </p>
+                            <p class="flex items-start space-x-3">
+                                <span class="flex-shrink-0 text-oes-secondary">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                </span>
+                                <span>
+                                    <strong class="font-bold">Secretary:</strong><br>
+                                    Contact via the form for official chapter business.
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col items-center space-y-4">
+                <p class="text-xl font-bold text-oes-secondary">Leander Chapter No. 73</p>
+                <p class="text-sm text-gray-400">
+                    &copy; 2025 Leander OES Chapter No. 73. All Rights Reserved.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://oestx.org/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-oes-secondary transition duration-300 text-sm">Grand Chapter of Texas OES</a>
+                    <a href="https://easternstar.org/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-oes-secondary transition duration-300 text-sm">General Grand Chapter OES</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Navigation Script ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- Contact Form Script (Simulated Submission) ---
+        const contactForm = document.getElementById('contact-form');
+        const submitButton = document.getElementById('submit-button');
+        const buttonText = document.getElementById('button-text');
+        const spinner = document.getElementById('spinner');
+        const responseMessage = document.getElementById('response-message');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            buttonText.textContent = 'Sending...';
+            spinner.classList.remove('hidden');
+            responseMessage.classList.add('hidden');
+
+            // Simulate a network request delay
+            setTimeout(() => {
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+
+                // Success message
+                responseMessage.textContent = `Thank you, ${name}! Your inquiry has been noted. We will respond to ${email} shortly.`;
+                responseMessage.classList.remove('hidden');
+                responseMessage.classList.add('text-oes-secondary');
+                responseMessage.classList.remove('text-red-500');
+
+                // Reset form and state
+                contactForm.reset();
+                submitButton.disabled = false;
+                buttonText.textContent = 'Send Message';
+                spinner.classList.add('hidden');
+
+                // Optional: Scroll to the response message for visibility on mobile
+                responseMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            }, 2000); // 2 second delay for simulation
+        });
+    </script>
+</body>
+</html>
