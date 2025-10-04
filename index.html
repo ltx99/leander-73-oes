@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leander No. 73 Order of the Eastern Star | Charity, Truth, Loving Kindness</title>
+    <!-- Favicon: OES Star SVG in primary color -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%235e17eb' d='M256 0l64 160h192l-155 112 60 160-161-120-161 120 60-160-155-112h192z'/></svg>">
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -298,19 +300,18 @@
                             </p>
                         </div>
                         
-                        <!-- UPDATED LOCAL SCHOLARSHIP SECTION WITH DOWNLOAD BUTTON -->
+                        <!-- LOCAL SCHOLARSHIP SECTION -->
                         <div class="p-4 rounded-lg bg-gray-100 shadow-sm">
                             <h4 class="font-bold text-lg text-oes-primary">Local High School Scholarships</h4>
                             <p class="text-gray-600 text-sm mt-1 mb-4">
                                 Leander Chapter No. 73 proudly provides scholarships directly to deserving graduating students from local Leander area high schools to support their continued education.
                             </p>
-                            <a href="#" id="scholarship-download-btn" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-md text-oes-primary bg-oes-secondary hover:bg-yellow-300 transition duration-300">
+                            <a href="Leander_OES_Scholarship_Application.pdf" download class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-md text-oes-primary bg-oes-secondary hover:bg-yellow-300 transition duration-300">
                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                                 Download Application & Instructions
                             </a>
-                            <p id="scholarship-message" class="text-xs mt-2 text-green-700 hidden">Simulated download link activated.</p>
                         </div>
-                        <!-- END UPDATED SECTION -->
+                        <!-- END SCHOLARSHIP SECTION -->
 
                         <div class="p-4 rounded-lg bg-gray-100 shadow-sm">
                             <h4 class="font-bold text-lg text-oes-primary">Youth Support (Rainbow & DeMolay)</h4>
@@ -463,22 +464,6 @@
 
             }, 2000); // 2 second delay for simulation
         });
-
-        // --- Scholarship Download Simulation ---
-        const downloadButton = document.getElementById('scholarship-download-btn');
-        const scholarshipMessage = document.getElementById('scholarship-message');
-
-        if (downloadButton) {
-            downloadButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                scholarshipMessage.textContent = 'Preparing download... (simulated)';
-                scholarshipMessage.classList.remove('hidden');
-                
-                setTimeout(() => {
-                    scholarshipMessage.textContent = 'Download link placeholder activated.';
-                }, 1000);
-            });
-        }
     </script>
 </body>
 </html>
