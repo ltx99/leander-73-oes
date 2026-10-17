@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leander No. 73 Order of the Eastern Star | Charity, Truth, Loving Kindness</title>
-    <!-- Favicon: OES Star SVG in primary color -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%235e17eb' d='M256 0l64 160h192l-155 112 60 160-161-120-161 120 60-160-155-112h192z'/></svg>">
+    <meta name="description" content="Leander Chapter No. 73, Order of the Eastern Star, in Leander, Texas. Meets the 3rd Tuesday of each month. Membership inquiries, local scholarships, and community service.">
+    <link rel="canonical" href="https://leander73.org/">
+    <meta name="theme-color" content="#5e17eb">
+    <!-- Link previews (Facebook, text messages, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Leander Chapter No. 73 OES">
+    <meta property="og:title" content="Leander Chapter No. 73, Order of the Eastern Star">
+    <meta property="og:description" content="Charity, Truth, and Loving Kindness in Leander, Texas. Meets the 3rd Tuesday of each month.">
+    <meta property="og:url" content="https://leander73.org/">
+    <meta property="og:image" content="https://leander73.org/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Leander Chapter No. 73, Order of the Eastern Star, Leander, Texas">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon: downward-pointing OES star in primary color -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%235e17eb' transform='rotate(180 256 256)' d='M256 0l64 160h192l-155 112 60 160-161-120-161 120 60-160-155-112h192z'/></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
     <!-- Site styles: built from src/input.css with Tailwind (npm run build:css) -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -69,7 +86,7 @@
                         Dedicated to <strong>Charity, Truth, and Loving Kindness</strong>. We are committed to uplifting our community through service, education, and fraternal love.
                     </p>
                     <div class="mt-8">
-                        <a href="#contact" class="inline-block px-8 py-3 bg-oes-secondary text-oes-primary font-bold text-lg rounded-full shadow-lg hover:bg-white transition duration-300 transform hover:scale-105">
+                        <a href="#contact" class="inline-block px-8 py-3 bg-oes-secondary text-[#3a0e98] font-bold text-lg rounded-full shadow-lg hover:bg-white transition duration-300 transform hover:scale-105">
                             Inquire About Membership
                         </a>
                     </div>
@@ -207,7 +224,7 @@
         <section id="charities" class="py-16 sm:py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center lg:text-left">
-                    <p class="text-base text-oes-secondary font-semibold tracking-wide uppercase">Community Outreach</p>
+                    <p class="text-base text-oes-primary font-semibold tracking-wide uppercase">Community Outreach</p>
                     <h2 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                         Making a Difference in Leander & Texas
                     </h2>
@@ -230,7 +247,7 @@
                             <p class="text-gray-600 text-sm mt-1 mb-4">
                                 Leander Chapter No. 73 proudly provides scholarships directly to deserving graduating students from local Leander area high schools to support their continued education.
                             </p>
-                            <a href="Vicky Jacoby Scholarship Application (Leander73OES).pdf" download class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-md text-oes-primary bg-oes-secondary hover:bg-yellow-300 transition duration-300">
+                            <a href="vicky-jacoby-scholarship-application.pdf" download="Vicky Jacoby Scholarship Application (Leander 73 OES).pdf" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-md text-[#3a0e98] bg-oes-secondary hover:bg-yellow-300 transition duration-300">
                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                                 Download Application & Instructions
                             </a>
@@ -255,24 +272,23 @@
                     <!-- Contact Form -->
                     <div class="order-2 lg:order-1">
                         <h2 class="text-2xl font-bold mb-6 text-oes-secondary">Get In Touch</h2>
-                        <!-- UPDATED FORM: Uses Formspree endpoint for real email sending -->
+                        <!-- Contact form: submits to Formspree, which emails the chapter -->
                         <form id="contact-form" action="https://formspree.io/f/meorzekj" method="POST" class="space-y-4 bg-white p-6 rounded-xl shadow-2xl">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                                <!-- Added 'name' attribute -->
                                 <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-2 text-gray-800 focus:border-oes-secondary focus:ring-oes-secondary">
                             </div>
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
-                                <!-- Added 'name' attribute -->
                                 <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-2 text-gray-800 focus:border-oes-secondary focus:ring-oes-secondary">
                             </div>
                             <div>
                                 <label for="message" class="block text-sm font-medium text-gray-700">Your Inquiry (e.g., Membership, Events, Donations)</label>
-                                <!-- Added 'name' attribute -->
                                 <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-2 text-gray-800 focus:border-oes-secondary focus:ring-oes-secondary"></textarea>
                             </div>
-                            <button type="submit" id="submit-button" class="w-full flex justify-center items-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-oes-primary bg-oes-secondary hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-oes-secondary transition duration-300 transform hover:scale-[1.02]">
+                            <!-- Spam trap: hidden from people; bots that fill it in are discarded by Formspree -->
+                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+                            <button type="submit" id="submit-button" class="w-full flex justify-center items-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-semibold text-[#3a0e98] bg-oes-secondary hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-oes-secondary transition duration-300 transform hover:scale-[1.02]">
                                 <span id="button-text">Send Message</span>
                                 <div id="spinner" class="spinner hidden"></div>
                             </button>
@@ -280,7 +296,7 @@
                         </form>
                     </div>
 
-                    <!-- Chapter Details (Placeholder) -->
+                    <!-- Chapter Details -->
                     <div class="order-1 lg:order-2 mt-12 lg:mt-0">
                         <h2 class="text-2xl font-bold mb-6 text-oes-secondary">Chapter Information</h2>
                         <div class="space-y-6 text-lg">
@@ -326,7 +342,7 @@
             <div class="flex flex-col items-center space-y-4">
                 <p class="text-xl font-bold text-oes-secondary">Leander Chapter No. 73</p>
                 <p class="text-sm text-gray-400">
-                    &copy; 2025 Leander OES Chapter No. 73. All Rights Reserved.
+                    &copy; <span id="copyright-year">2026</span> Leander OES Chapter No. 73. All Rights Reserved.
                 </p>
                 <div class="flex space-x-4">
                     <a href="https://oestx.org/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-oes-secondary transition duration-300 text-sm">Grand Chapter of Texas OES</a>
@@ -365,6 +381,9 @@
                 mobileMenuButton.focus();
             }
         });
+
+        // --- Footer year ---
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
         // --- Contact Form Logic (Formspree Submission) ---
         const contactForm = document.getElementById('contact-form');
