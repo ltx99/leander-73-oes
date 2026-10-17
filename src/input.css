@@ -1,0 +1,61 @@
+/*
+ * Source for styles.css. Edit this file (or the classes in index.html),
+ * then rebuild with:  npm run build:css
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom colors based on OES symbolism */
+:root {
+    --color-oes-blue: #0077b6;    /* Adah / Fidelity */
+    --color-oes-yellow: #ffc300;  /* Ruth / Constancy */
+    --color-oes-white: #e9e9e9;   /* Esther / Loyalty */
+    --color-oes-green: #008000;   /* Martha / Faith */
+    --color-oes-red: #d62828;     /* Electa / Love */
+    --color-primary: #5e17eb;     /* Deep Purple/Masonic theme */
+    --color-secondary: #ffad00;   /* Gold/Yellow accent */
+}
+
+/* Background helpers for the Star-point badges */
+.oes-blue { background-color: var(--color-oes-blue); }
+.oes-yellow { background-color: var(--color-oes-yellow); }
+.oes-white { background-color: var(--color-oes-white); }
+.oes-green { background-color: var(--color-oes-green); }
+.oes-red { background-color: var(--color-oes-red); }
+
+/* Custom gradient for the hero section */
+.hero-bg {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #3a0e98 100%);
+}
+
+/* Five-pointed star icon */
+.oes-star-icon {
+    transform: rotate(180deg); /* Points down, symbolizing humility */
+}
+
+/* Center Electa in the 5-item grid on desktop */
+@media (min-width: 1024px) {
+    .star-points-grid > div:nth-child(5) {
+        grid-column: 2 / span 1;
+    }
+}
+
+/* Font for a slightly more traditional yet clean look */
+.font-serif-display {
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+/* Loading spinner on the contact form button */
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-left-color: #ffffff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

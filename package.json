@@ -1,0 +1,12 @@
+{
+  "name": "leander-73-oes",
+  "private": true,
+  "description": "Leander Chapter No. 73 OES website",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./styles.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

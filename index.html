@@ -6,84 +6,8 @@
     <title>Leander No. 73 Order of the Eastern Star | Charity, Truth, Loving Kindness</title>
     <!-- Favicon: OES Star SVG in primary color -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%235e17eb' d='M256 0l64 160h192l-155 112 60 160-161-120-161 120 60-160-155-112h192z'/></svg>">
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom colors based on OES symbolism for Tailwind configuration */
-        :root {
-            --color-oes-blue: #0077b6;    /* Adah / Fidelity */
-            --color-oes-yellow: #ffc300;  /* Ruth / Constancy */
-            --color-oes-white: #e9e9e9;   /* Esther / Loyalty */
-            --color-oes-green: #008000;   /* Martha / Faith */
-            --color-oes-red: #d62828;     /* Electa / Love */
-            --color-primary: #5e17eb;     /* Deep Purple/Masonic theme */
-            --color-secondary: #ffad00;   /* Gold/Yellow accent */
-        }
-
-        /* Custom configuration for Tailwind colors */
-        .oes-blue { background-color: var(--color-oes-blue); }
-        .oes-yellow { background-color: var(--color-oes-yellow); }
-        .oes-white { background-color: var(--color-oes-white); }
-        .oes-green { background-color: var(--color-oes-green); }
-        .oes-red { background-color: var(--color-oes-red); }
-
-        /* Custom gradient for the hero section */
-        .hero-bg {
-            background: linear-gradient(135deg, var(--color-primary) 0%, #3a0e98 100%);
-        }
-
-        /* Style for the five-pointed star icon */
-        .oes-star-icon {
-            transform: rotate(180deg); /* Points down, symbolizing humility */
-        }
-
-        /* Custom CSS for the star points layout on desktop */
-        @media (min-width: 1024px) {
-            .star-points-grid > div:nth-child(5) {
-                grid-column: 2 / span 1; /* Center Electa in the 5-item grid */
-            }
-        }
-        
-        /* Font for a slightly more traditional yet clean look */
-        .font-serif-display {
-            font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-        }
-
-        /* Styling for the loading spinner */
-        .spinner {
-            border: 4px solid rgba(255, 255, 255, 0.1);
-            border-left-color: #ffffff;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-    </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'oes-primary': 'var(--color-primary)',
-                        'oes-secondary': 'var(--color-secondary)',
-                        'oes-blue': 'var(--color-oes-blue)',
-                        'oes-yellow': 'var(--color-oes-yellow)',
-                        'oes-white-point': 'var(--color-oes-white)',
-                        'oes-green': 'var(--color-oes-green)',
-                        'oes-red': 'var(--color-oes-red)',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['ui-serif', 'Georgia'],
-                    },
-                }
-            }
-        }
-    </script>
+    <!-- Site styles: built from src/input.css with Tailwind (npm run build:css) -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
@@ -104,8 +28,8 @@
                 <a href="#contact" class="px-3 py-1 bg-oes-secondary text-white rounded-lg shadow-md hover:bg-oes-primary transition duration-300">Contact</a>
             </div>
             <!-- Mobile Menu Button (Hamburger) -->
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 transition duration-150" aria-label="Open menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <button id="mobile-menu-button" type="button" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 transition duration-150" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </nav>
         <!-- Mobile Menu Dropdown -->
@@ -138,9 +62,9 @@
                     <h1 class="text-4xl sm:text-6xl font-extrabold font-serif-display leading-tight">
                         Leander Chapter No. 73
                     </h1>
-                    <h2 class="text-2xl sm:text-3xl font-light italic">
+                    <p class="text-2xl sm:text-3xl font-light italic">
                         The Order of the Eastern Star, Leander, Texas
-                    </h2>
+                    </p>
                     <p class="mt-4 max-w-3xl mx-auto text-xl font-medium">
                         Dedicated to <strong>Charity, Truth, and Loving Kindness</strong>. We are committed to uplifting our community through service, education, and fraternal love.
                     </p>
@@ -157,51 +81,51 @@
         <section id="about" class="py-16 sm:py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="lg:text-center">
-                    <h3 class="text-base text-oes-primary font-semibold tracking-wide uppercase">Who We Are</h3>
-                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    <p class="text-base text-oes-primary font-semibold tracking-wide uppercase">Who We Are</p>
+                    <h2 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                         A Fraternal Family United in Service
-                    </p>
+                    </h2>
                     <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
                         The Order of the Eastern Star is the largest fraternal organization in the world open to both men and women, built on the foundations of the Masonic family. Our purpose is to provide a spiritual and social environment where good people are inspired to be better.
                     </p>
                 </div>
 
                 <div class="mt-10">
-                    <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-                        <div class="flex">
-                            <div class="flex-shrink-0">
+                    <ul role="list" class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                        <li class="flex">
+                            <div class="flex-shrink-0" aria-hidden="true">
                                 <div class="flex items-center justify-center h-12 w-12 rounded-md bg-oes-primary text-white shadow-lg">
                                     <!-- Icon for Faith -->
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354c-4.148-4.148-10.9-1.077-10.9 5.646 0 5.432 4.148 7.397 10.9 14.127 6.752-6.73 10.9-8.695 10.9-14.127 0-6.723-6.752-9.794-10.9-5.646z"></path></svg>
                                 </div>
                             </div>
                             <div class="ml-4">
-                                <dt class="text-lg leading-6 font-medium text-gray-900">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">
                                     Shared Principles
-                                </dt>
-                                <dd class="mt-2 text-base text-gray-500">
+                                </h3>
+                                <p class="mt-2 text-base text-gray-500">
                                     We teach moral lessons based on Biblical figures, promoting essential virtues like Fidelity, Constancy, Loyalty, Faith, and Love through a system of degrees.
-                                </dd>
+                                </p>
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="flex">
-                            <div class="flex-shrink-0">
+                        <li class="flex">
+                            <div class="flex-shrink-0" aria-hidden="true">
                                 <div class="flex items-center justify-center h-12 w-12 rounded-md bg-oes-primary text-white shadow-lg">
                                     <!-- Icon for Community -->
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-3m-1.5-1.5a4.5 4.5 0 01-9 0m9 0a4.5 4.5 0 00-9 0m9 0h-3v-3m-1.5-1.5a4.5 4.5 0 01-9 0m9 0a4.5 4.5 0 00-9 0m9 0h-3v-3m-1.5-1.5a4.5 4.5 0 01-9 0m9 0a4.5 4.5 0 00-9 0m9 0h-3v-3"></path></svg>
                                 </div>
                             </div>
                             <div class="ml-4">
-                                <dt class="text-lg leading-6 font-medium text-gray-900">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">
                                     Local Fraternal Bond
-                                </dt>
-                                <dd class="mt-2 text-base text-gray-500">
+                                </h3>
+                                <p class="mt-2 text-base text-gray-500">
                                     Leander Chapter No. 73 provides a caring and supportive environment for members and their families in the Leander and Central Texas area.
-                                </dd>
+                                </p>
                             </div>
-                        </div>
-                    </dl>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -210,10 +134,10 @@
         <section id="star-points" class="py-16 sm:py-24 bg-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h3 class="text-base text-oes-primary font-semibold tracking-wide uppercase">The Five-Pointed Star</h3>
-                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    <p class="text-base text-oes-primary font-semibold tracking-wide uppercase">The Five-Pointed Star</p>
+                    <h2 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                         Lessons of the Five Heroines
-                    </p>
+                    </h2>
                     <p class="mt-4 max-w-3xl text-xl text-gray-500 mx-auto">
                         Each point of our Star symbolizes a virtue, a color, and a heroic woman from Biblical history who displayed great devotion, courage, and faith.
                     </p>
@@ -283,10 +207,10 @@
         <section id="charities" class="py-16 sm:py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center lg:text-left">
-                    <h3 class="text-base text-oes-secondary font-semibold tracking-wide uppercase">Community Outreach</h3>
-                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    <p class="text-base text-oes-secondary font-semibold tracking-wide uppercase">Community Outreach</p>
+                    <h2 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                         Making a Difference in Leander & Texas
-                    </p>
+                    </h2>
                 </div>
                 <div class="mt-10 lg:grid lg:grid-cols-3 lg:gap-8">
                     <p class="text-lg text-gray-500 lg:col-span-1">
@@ -294,7 +218,7 @@
                     </p>
                     <div class="mt-8 lg:mt-0 lg:col-span-2 space-y-6">
                         <div class="p-4 rounded-lg bg-gray-100 shadow-sm">
-                            <h4 class="font-bold text-lg text-oes-primary">Patriot Paws Service Dogs</h4>
+                            <h3 class="font-bold text-lg text-oes-primary">Patriot Paws Service Dogs</h3>
                             <p class="text-gray-600 text-sm mt-1">
                                 We proudly support the Texas Grand Chapter's endorsement of Patriot Paws, an organization that trains and provides service dogs to disabled American veterans.
                             </p>
@@ -302,7 +226,7 @@
                         
                         <!-- LOCAL SCHOLARSHIP SECTION -->
                         <div class="p-4 rounded-lg bg-gray-100 shadow-sm">
-                            <h4 class="font-bold text-lg text-oes-primary">Local High School Scholarships</h4>
+                            <h3 class="font-bold text-lg text-oes-primary">Local High School Scholarships</h3>
                             <p class="text-gray-600 text-sm mt-1 mb-4">
                                 Leander Chapter No. 73 proudly provides scholarships directly to deserving graduating students from local Leander area high schools to support their continued education.
                             </p>
@@ -314,7 +238,7 @@
                         <!-- END SCHOLARSHIP SECTION -->
 
                         <div class="p-4 rounded-lg bg-gray-100 shadow-sm">
-                            <h4 class="font-bold text-lg text-oes-primary">Youth Support (Rainbow & DeMolay)</h4>
+                            <h3 class="font-bold text-lg text-oes-primary">Youth Support (Rainbow & DeMolay)</h3>
                             <p class="text-gray-600 text-sm mt-1">
                                 We are dedicated to nurturing future leaders by supporting the International Order of the Rainbow for Girls and the Order of DeMolay.
                             </p>
@@ -330,7 +254,7 @@
                 <div class="lg:grid lg:grid-cols-2 lg:gap-12">
                     <!-- Contact Form -->
                     <div class="order-2 lg:order-1">
-                        <h3 class="text-2xl font-bold mb-6 text-oes-secondary">Get In Touch</h3>
+                        <h2 class="text-2xl font-bold mb-6 text-oes-secondary">Get In Touch</h2>
                         <!-- UPDATED FORM: Uses Formspree endpoint for real email sending -->
                         <form id="contact-form" action="https://formspree.io/f/meorzekj" method="POST" class="space-y-4 bg-white p-6 rounded-xl shadow-2xl">
                             <div>
@@ -358,7 +282,7 @@
 
                     <!-- Chapter Details (Placeholder) -->
                     <div class="order-1 lg:order-2 mt-12 lg:mt-0">
-                        <h3 class="text-2xl font-bold mb-6 text-oes-secondary">Chapter Information</h3>
+                        <h2 class="text-2xl font-bold mb-6 text-oes-secondary">Chapter Information</h2>
                         <div class="space-y-6 text-lg">
                             <p class="flex items-start space-x-3">
                                 <span class="flex-shrink-0 text-oes-secondary">
@@ -418,16 +342,28 @@
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
+        // Open/close the menu and keep screen readers informed of its state
+        function setMenuOpen(isOpen) {
+            mobileMenu.classList.toggle('hidden', !isOpen);
+            mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
+            mobileMenuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+        }
+
         mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            setMenuOpen(mobileMenu.classList.contains('hidden'));
         });
 
         // Close menu when a link is clicked
-        const menuLinks = mobileMenu.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => setMenuOpen(false));
+        });
+
+        // Close menu with the Escape key and return focus to the button
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                setMenuOpen(false);
+                mobileMenuButton.focus();
+            }
         });
 
         // --- Contact Form Logic (Formspree Submission) ---
