@@ -34,13 +34,6 @@
     transform: rotate(180deg); /* Points down, symbolizing humility */
 }
 
-/* Center Electa in the 5-item grid on desktop */
-@media (min-width: 1024px) {
-    .star-points-grid > div:nth-child(5) {
-        grid-column: 2 / span 1;
-    }
-}
-
 /* Font for a slightly more traditional yet clean look */
 .font-serif-display {
     font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
