@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Vicky Jacoby Scholarship Application</title>
+<style>
+  @page { size: 8.5in 11in; margin: 0; }
+  :root {
+    --purple: #5e17eb;
+    --purple-dark: #3a0e98;
+    --gold: #ffad00;
+    --star: #ffc300;
+    --ink: #1f2330;
+    --muted: #555b6e;
+    --line: #b9bdc9;
+    --tint: #f5f2fe;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Inter, sans-serif; color: var(--ink); font-size: 14.5px; line-height: 1.45;
+         -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 816px; height: 1056px; position: relative; overflow: hidden; page-break-after: always; break-after: page; }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+
+  /* Header band */
+  .band { background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%); color: #fff;
+          padding: 30px 56px 26px; display: flex; align-items: center; gap: 22px; }
+  .band svg { width: 62px; height: 62px; flex: none; }
+  .band .org { font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #fff; opacity: .92; }
+  .band h1 { font-family: Caladea, Georgia, serif; font-weight: 700; font-size: 34px; line-height: 1.1; margin: 4px 0 0; }
+  .band .sub { font-size: 16px; font-style: italic; font-weight: 300; margin-top: 4px; }
+  .band.small { padding: 18px 56px 16px; }
+  .band.small svg { width: 40px; height: 40px; }
+  .band.small h1 { font-size: 24px; margin: 0; }
+  .goldrule { height: 6px; background: var(--gold); }
+
+  .body { padding: 26px 56px 0; }
+  footer { position: absolute; left: 56px; right: 56px; bottom: 26px; display: flex; justify-content: space-between;
+           font-size: 11.5px; color: var(--muted); border-top: 1px solid #e3e4ea; padding-top: 8px; }
+
+  /* Instructions */
+  ol.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+  ol.steps li { counter-increment: s; position: relative; padding: 0 0 0 42px; margin: 0 0 16px; font-size: 15.5px; }
+  ol.steps li::before { content: counter(s); position: absolute; left: 0; top: -1px; width: 28px; height: 28px; border-radius: 50%;
+         background: var(--purple); color: #fff; font-weight: 700; font-size: 13.5px; display: flex; align-items: center; justify-content: center; }
+  .callout { border: 2px solid var(--gold); background: #fff8e6; border-radius: 10px; padding: 16px 20px; margin: 4px 0 22px;
+             display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; }
+  .callout .k { font-size: 11.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--purple-dark); }
+  .callout .v { font-size: 17px; font-weight: 600; }
+  .callout .v a { color: var(--purple-dark); text-decoration: underline; }
+
+  /* Form */
+  h2.sec { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--purple);
+           border-bottom: 2px solid var(--purple); padding-bottom: 5px; margin: 20px 0 12px; }
+  h2.sec:first-child { margin-top: 0; }
+  .row { display: flex; gap: 18px; margin-bottom: 11px; }
+  .col { flex: 1; min-width: 0; }
+  .lbl { font-size: 12.5px; font-weight: 600; color: var(--ink); margin-bottom: 3px; display: flex; align-items: center; gap: 8px; }
+  .pts { display: inline-block; background: var(--gold); color: var(--purple-dark); font-size: 10.5px; font-weight: 700;
+         padding: 1px 8px; border-radius: 999px; letter-spacing: .02em; white-space: nowrap; }
+  .hint { font-weight: 400; color: var(--muted); font-size: 11.5px; }
+  .field { border: 1px solid var(--line); border-radius: 5px; background: #fff; height: 28px; }
+  .field.l2 { height: 50px; }
+  .field.l3 { height: 72px; }
+  .note { background: var(--tint); border-left: 4px solid var(--purple); border-radius: 0 8px 8px 0; padding: 11px 16px; font-size: 13px; margin: 0 0 12px; }
+  .note b { color: var(--purple-dark); }
+  .yn { display: flex; align-items: center; gap: 20px; margin: 2px 0 7px; font-size: 13.5px; }
+  .yn label { display: flex; align-items: center; gap: 7px; }
+  .cb { width: 17px; height: 17px; border: 1.5px solid var(--muted); border-radius: 3px; display: inline-block; background: #fff; }
+</style>
+</head>
+<body>
+
+<!-- ===================== PAGE 1: INSTRUCTIONS ===================== -->
+<section class="page">
+  <div class="band">
+    <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#ffc300" transform="rotate(180 256 256)" d="M256 0l64 160h192l-155 112 60 160-161-120-161 120 60-160-155-112h192z"/></svg>
+    <div>
+      <div class="org">Leander Chapter No. 73 &middot; Order of the Eastern Star</div>
+      <h1>Vicky Jacoby Scholarship</h1>
+      <div class="sub">Application Instructions</div>
+    </div>
+  </div>
+  <div class="goldrule"></div>
+
+  <div class="body">
+    <div class="callout">
+      <div><div class="k">Deadline</div><div class="v">April 15th of the current school year</div></div>
+      <div><div class="k">Email completed applications to</div><div class="v">Karen Gregory<br><a href="mailto:lkgleander363@gmail.com">lkgleander363@gmail.com</a></div></div>
+    </div>
+
+    <ol class="steps">
+      <li>This scholarship is being awarded by Leander Chapter #73, Order of the Eastern Star.</li>
+      <li>A minimum of 3 scholarships can be awarded in the amount of $500.00.</li>
+      <li>All applicants must be graduating seniors, who plan on attending a College, University or trade school to further their education and can provide proof of registration or enrollment in said institution.</li>
+      <li>Recipients will be chosen based on points awarded for academic achievement and school/community involvement.</li>
+      <li>Point values are listed on the application.</li>
+      <li>Each application must also have a brief essay attached (50-100 words) describing how this scholarship money would help further the applicant's plans for the future.</li>
+      <li>Completed applications must be received no later than April 15th of the current school year, to: Karen Gregory, Leander Chapter #73 OES, emailed to <a href="mailto:lkgleander363@gmail.com" style="color:var(--purple-dark)">lkgleander363@gmail.com</a>.</li>
+      <li>Chosen recipients will be notified by phone or email. We would like recipients and their families to join us for dinner and an awards ceremony at our chapter meeting on the third Tuesday in May at 6:30pm, held in the historic Norton Moses Masonic Lodge at 201 Sonny Dr in Leander.</li>
+    </ol>
+  </div>
+
+  <footer><span>Leander Chapter No. 73, Order of the Eastern Star &middot; leander73.org</span><span>Page 1 of 3</span></footer>
+</section>
+
+<!-- ===================== PAGE 2: APPLICATION ===================== -->
+<section class="page">
+  <div class="band small">
+    <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#ffc300" transform="rotate(180 256 256)" d="M256 0l64 160h192l-155 112 60 160-161-120-161 120 60-160-155-112h192z"/></svg>
+    <div>
+      <div class="org">Leander Chapter No. 73 &middot; Order of the Eastern Star</div>
+      <h1>Vicky Jacoby Scholarship Application</h1>
+    </div>
+  </div>
+  <div class="goldrule"></div>
+
+  <div class="body">
+    <h2 class="sec">Applicant</h2>
+    <div class="row"><div class="col"><div class="lbl">Applicant's Name</div><div class="field" data-name="applicant_name" data-tip="Applicant's name"></div></div></div>
+    <div class="row"><div class="col"><div class="lbl">Address</div><div class="field" data-name="address" data-tip="Address"></div></div></div>
+    <div class="row">
+      <div class="col"><div class="lbl">Date of Birth</div><div class="field" data-name="date_of_birth" data-tip="Date of birth"></div></div>
+      <div class="col"><div class="lbl">Cell Phone</div><div class="field" data-name="applicant_cell" data-tip="Applicant cell phone"></div></div>
+    </div>
+    <div class="row">
+      <div class="col"><div class="lbl">Parent/Guardian's Name</div><div class="field" data-name="parent_guardian_name" data-tip="Parent/guardian's name"></div></div>
+      <div class="col"><div class="lbl">Parent/Guardian's Cell Phone</div><div class="field" data-name="parent_cell" data-tip="Parent/guardian cell phone"></div></div>
+    </div>
+
+    <h2 class="sec">Education</h2>
+    <div class="row">
+      <div class="col" style="flex:1.6"><div class="lbl">What High School do you currently attend?</div><div class="field" data-name="high_school" data-tip="High school you currently attend"></div></div>
+      <div class="col"><div class="lbl">When will you Graduate?</div><div class="field" data-name="graduation_date" data-tip="When you will graduate"></div></div>
+    </div>
+    <div class="row"><div class="col"><div class="lbl">What College/University/Trade School will you be attending?</div><div class="field" data-name="college" data-tip="College, university or trade school you will attend"></div></div></div>
+    <div class="row"><div class="col"><div class="lbl">What do you plan to study?</div><div class="field l2" data-name="study_plans" data-lines="2" data-tip="What you plan to study"></div></div></div>
+
+    <h2 class="sec">Scoring Categories</h2>
+    <div class="note">Scholarships will be awarded based on total points received in the following categories.</div>
+
+    <div class="row"><div class="col">
+      <div class="lbl">Any Family member with Eastern Star/Masonic Affiliation <span class="pts">3 points</span></div>
+      <div class="yn">
+        <label><span class="cb" data-check="family_affiliation_yes" data-tip="Yes, a family member has Eastern Star/Masonic affiliation"></span>Yes</label>
+        <label><span class="cb" data-check="family_affiliation_no" data-tip="No family Eastern Star/Masonic affiliation"></span>No</label>
+      </div>
+      <div class="lbl"><span class="hint">Please explain:</span></div>
+      <div class="field" data-name="family_affiliation_explain" data-tip="Please explain the family Eastern Star/Masonic affiliation"></div>
+    </div></div>
+
+    <div class="row">
+      <div class="col"><div class="lbl">Current GPA <span class="hint">(on 4 point scale)</span></div><div class="field" data-name="gpa" data-tip="Current GPA (4 point scale)"></div></div>
+      <div class="col"><div class="lbl">Class Rank <span class="pts">3, 2 or 1 point</span></div><div class="field" data-name="class_rank" data-tip="Class rank"></div>
+        <div class="hint" style="margin-top:3px">for the top 3 applicants</div></div>
+    </div>
+  </div>
+
+  <footer><span>Leander Chapter No. 73, Order of the Eastern Star &middot; leander73.org</span><span>Page 2 of 3</span></footer>
+</section>
+
+<!-- ===================== PAGE 3: APPLICATION (cont.) ===================== -->
+<section class="page">
+  <div class="band small">
+    <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#ffc300" transform="rotate(180 256 256)" d="M256 0l64 160h192l-155 112 60 160-161-120-161 120 60-160-155-112h192z"/></svg>
+    <div>
+      <div class="org">Leander Chapter No. 73 &middot; Order of the Eastern Star</div>
+      <h1>Vicky Jacoby Scholarship Application</h1>
+    </div>
+  </div>
+  <div class="goldrule"></div>
+
+  <div class="body">
+    <h2 class="sec">Scoring Categories, continued</h2>
+    <div class="row"><div class="col"><div class="lbl">Honors/Awards <span class="pts">1 point</span></div><div class="field l3" data-name="honors_awards" data-lines="3" data-tip="Honors and awards"></div></div></div>
+    <div class="row"><div class="col"><div class="lbl">School Activities <span class="pts">1 point</span></div><div class="field l3" data-name="school_activities" data-lines="3" data-tip="School activities"></div></div></div>
+    <div class="row"><div class="col"><div class="lbl">Other Organizations <span class="pts">1 point</span></div><div class="field l2" data-name="other_organizations" data-lines="2" data-tip="Other organizations"></div></div></div>
+    <div class="row"><div class="col"><div class="lbl">Community Service <span class="pts">1 point</span></div><div class="field l3" data-name="community_service" data-lines="3" data-tip="Community service"></div></div></div>
+
+    <h2 class="sec">Essay</h2>
+    <div class="note">In 50-100 words please tell us how this scholarship money will help further your plans for the future. <b>Write neatly, or type, on a separate sheet, and attach to the back of this application.</b> Essays will be used at the discretion of the scholarship committee in the case of ties between applicants.</div>
+
+    <h2 class="sec">School Counselor</h2>
+    <p style="margin:0 0 10px; font-size:13.5px">In the event you are elected to receive a scholarship, we would like to notify your high school about your achievement. For this reason, please provide the following.</p>
+    <div class="row">
+      <div class="col"><div class="lbl">Name of Counselor</div><div class="field" data-name="counselor_name" data-tip="Name of school counselor"></div></div>
+      <div class="col"><div class="lbl">Phone Number</div><div class="field" data-name="counselor_phone" data-tip="Counselor phone number"></div></div>
+    </div>
+  </div>
+
+  <footer><span>Leander Chapter No. 73, Order of the Eastern Star &middot; leander73.org</span><span>Page 3 of 3</span></footer>
+</section>
+
+</body>
+</html>
