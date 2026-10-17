@@ -142,7 +142,7 @@
                         The Order of the Eastern Star, Leander, Texas
                     </h2>
                     <p class="mt-4 max-w-3xl mx-auto text-xl font-medium">
-                        Dedicated to **Charity, Truth, and Loving Kindness**. We are committed to uplifting our community through service, education, and fraternal love.
+                        Dedicated to <strong>Charity, Truth, and Loving Kindness</strong>. We are committed to uplifting our community through service, education, and fraternal love.
                     </p>
                     <div class="mt-8">
                         <a href="#contact" class="inline-block px-8 py-3 bg-oes-secondary text-oes-primary font-bold text-lg rounded-full shadow-lg hover:bg-white transition duration-300 transform hover:scale-105">
@@ -228,7 +228,7 @@
                             <span class="px-3 py-1 text-xs font-semibold rounded-full text-white oes-blue">Fidelity</span>
                         </div>
                         <p class="text-gray-600">
-                            The first point represents **Jephthah's Daughter**, symbolizing loyalty and obedience. Her story teaches us the value of adhering to one's word and moral integrity, regardless of the personal cost.
+                            The first point represents <strong>Jephthah's Daughter</strong>, symbolizing loyalty and obedience. Her story teaches us the value of adhering to one's word and moral integrity, regardless of the personal cost.
                         </p>
                     </div>
 
@@ -239,7 +239,7 @@
                             <span class="px-3 py-1 text-xs font-semibold rounded-full text-gray-900 oes-yellow">Constancy</span>
                         </div>
                         <p class="text-gray-600">
-                            The yellow point honors **Ruth**, the faithful widow, who embodies steadfast friendship and devotion. She teaches us selfless commitment and perseverance through difficult circumstances.
+                            The yellow point honors <strong>Ruth</strong>, the faithful widow, who embodies steadfast friendship and devotion. She teaches us selfless commitment and perseverance through difficult circumstances.
                         </p>
                     </div>
 
@@ -250,7 +250,7 @@
                             <span class="px-3 py-1 text-xs font-semibold rounded-full text-gray-900 oes-white">Loyalty</span>
                         </div>
                         <p class="text-gray-600">
-                            The white point is dedicated to **Queen Esther**, representing loyalty and courage. She demonstrated moral fortitude by risking her own life to save her people, standing for righteousness and truth.
+                            The white point is dedicated to <strong>Queen Esther</strong>, representing loyalty and courage. She demonstrated moral fortitude by risking her own life to save her people, standing for righteousness and truth.
                         </p>
                     </div>
 
@@ -261,7 +261,7 @@
                             <span class="px-3 py-1 text-xs font-semibold rounded-full text-white oes-green">Faith</span>
                         </div>
                         <p class="text-gray-600">
-                            The green point represents **Martha**, the sister of Lazarus, symbolizing faith in immortality. Her lesson encourages a steadfast and unwavering belief in divine promises and eternal life.
+                            The green point represents <strong>Martha</strong>, the sister of Lazarus, symbolizing faith in immortality. Her lesson encourages a steadfast and unwavering belief in divine promises and eternal life.
                         </p>
                     </div>
 
@@ -272,7 +272,7 @@
                             <span class="px-3 py-1 text-xs font-semibold rounded-full text-white oes-red">Love</span>
                         </div>
                         <p class="text-gray-600">
-                            The red point honors **Electa**, the "elect lady," signifying fortitude and endurance. She teaches us the highest form of Christian love and patience in the face of tribulation and persecution.
+                            The red point honors <strong>Electa</strong>, the "elect lady," signifying fortitude and endurance. She teaches us the highest form of Christian love and patience in the face of tribulation and persecution.
                         </p>
                     </div>
                 </div>
@@ -336,17 +336,17 @@
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
                                 <!-- Added 'name' attribute -->
-                                <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 text-gray-800 focus:border-oes-secondary focus:ring-oes-secondary">
+                                <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-2 text-gray-800 focus:border-oes-secondary focus:ring-oes-secondary">
                             </div>
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
                                 <!-- Added 'name' attribute -->
-                                <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 text-gray-800 focus:border-oes-secondary focus:ring-oes-secondary">
+                                <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-2 text-gray-800 focus:border-oes-secondary focus:ring-oes-secondary">
                             </div>
                             <div>
                                 <label for="message" class="block text-sm font-medium text-gray-700">Your Inquiry (e.g., Membership, Events, Donations)</label>
                                 <!-- Added 'name' attribute -->
-                                <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 text-gray-800 focus:border-oes-secondary focus:ring-oes-secondary"></textarea>
+                                <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-2 text-gray-800 focus:border-oes-secondary focus:ring-oes-secondary"></textarea>
                             </div>
                             <button type="submit" id="submit-button" class="w-full flex justify-center items-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-oes-primary bg-oes-secondary hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-oes-secondary transition duration-300 transform hover:scale-[1.02]">
                                 <span id="button-text">Send Message</span>
@@ -437,7 +437,7 @@
         const spinner = document.getElementById('spinner');
         const responseMessage = document.getElementById('response-message');
         
-        // This is the Formspree endpoint URL. REPLACE this placeholder with your actual Formspree URL.
+        // Formspree endpoint, read from the form's action attribute.
         const formspreeEndpoint = contactForm.action; 
 
         /**
@@ -451,11 +451,11 @@
             } else {
                 spinner.classList.add('hidden');
             }
-            responseMessage.classList.add('hidden');
         }
 
         contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
+            responseMessage.classList.add('hidden');
             toggleLoading(true);
 
             const formData = new FormData(contactForm);
@@ -473,23 +473,25 @@
 
                 if (response.ok) {
                     responseMessage.textContent = `Thank you, ${name}! Your inquiry has been sent successfully. We will respond to your email shortly.`;
-                    responseMessage.classList.remove('hidden', 'text-red-500');
-                    responseMessage.classList.add('text-oes-secondary');
+                    responseMessage.classList.remove('hidden', 'text-red-700', 'text-oes-green');
+                    responseMessage.classList.add('text-green-700');
                     
                     contactForm.reset();
                 } else {
                     // Handle errors returned by Formspree
-                    const data = await response.json();
-                    let errorMsg = data.error || "There was an issue submitting the form.";
+                    const data = await response.json().catch(() => ({}));
+                    const errorMsg = (Array.isArray(data.errors) && data.errors.length)
+                        ? data.errors.map(err => err.message).join(' ')
+                        : (data.error || "There was an issue submitting the form.");
                     responseMessage.textContent = `Submission failed: ${errorMsg}`;
-                    responseMessage.classList.remove('hidden', 'text-oes-secondary');
-                    responseMessage.classList.add('text-red-500');
+                    responseMessage.classList.remove('hidden', 'text-green-700', 'text-oes-green');
+                    responseMessage.classList.add('text-red-700');
                 }
             } catch (error) {
                 console.error("Network or submission error:", error);
                 responseMessage.textContent = "Submission failed. A network error occurred. Please try again.";
-                responseMessage.classList.remove('hidden', 'text-oes-secondary');
-                responseMessage.classList.add('text-red-500');
+                responseMessage.classList.remove('hidden', 'text-green-700', 'text-oes-green');
+                responseMessage.classList.add('text-red-700');
             } finally {
                 toggleLoading(false);
                 responseMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
